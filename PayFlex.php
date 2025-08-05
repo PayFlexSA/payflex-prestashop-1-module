@@ -52,7 +52,7 @@ class PayFlexMain extends PaymentModule
     {
         $this->name = 'PayFlex';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.0';
+        $this->version = '1.5.0';
         $this->author = 'PayFlex';
         $this->need_instance = 1;
 

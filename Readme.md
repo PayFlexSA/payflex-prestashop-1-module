@@ -1,15 +1,15 @@
-# PayFlex Gateway for PrestaShop 1.7
+# PayFlex Gateway for PrestaShop
 
-A payment gateway integration for PrestaShop 1.7 that enables PayFlex payment processing.
+A payment gateway integration for PrestaShop that enables PayFlex payment processing.
 
 ## Features
-- Seamless integration with PrestaShop 1.7
+- Seamless integration with PrestaShop 1.6 and 1.7
 - Secure payment processing
 - Easy installation and configuration
-- Legacy support for PrestaShop 1.7.x versions
+- Supports PrestaShop versions 1.6.x and 1.7.x
 
 ## Requirements
-- PrestaShop 1.7.x
+- PrestaShop 1.6.x or 1.7.x
 - PHP 7.2 or higher
 
 ## Installation
