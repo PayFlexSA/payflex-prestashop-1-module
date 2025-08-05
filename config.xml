@@ -2,12 +2,12 @@
 <module>
 	<name>PayFlex</name>
 	<displayName><![CDATA[PayFlex]]></displayName>
-	<version><![CDATA[1.0.0]]></version>
+	<version><![CDATA[1.5.0]]></version>
 	<description><![CDATA[PayFlex - Flex the way you pay.]]></description>
 	<author><![CDATA[PayFlex]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>
 	<confirmUninstall><![CDATA[Are you sure you want to uninstall the PayFlex module?]]></confirmUninstall>
 	<is_configurable>1</is_configurable>
 	<need_instance>1</need_instance>
-	<limited_countries></limited_countries>
+	<limited_countries>ZA</limited_countries>
 </module>
