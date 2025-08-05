@@ -220,6 +220,13 @@ class PayFlexService {
       $OrderBodyString .= $item . (($i < count($items)-1) ? ',' : '');
     }
 
+    $ecommerce_platform_string  = 'PrestaShop ' . _PS_VERSION_;
+    // $prestashop_active_modules = 0;
+    // $prestashop_modules = Db::getInstance()->executeS('SELECT name FROM `' . _DB_PREFIX_ . 'module` WHERE active = 1');
+    // if(!empty($prestashop_modules)){
+    //   $prestashop_active_modules = count($prestashop_modules);
+    // }
+
     $OrderBodyString .= '],
       "merchant": {
         "redirectConfirmUrl": "'. $order->confirm_url .'&status=confirmed",
@@ -229,7 +236,13 @@ class PayFlexService {
       "merchantReference": "'. $order->order_id .'",
       "token": "'. $order->order_id .'",
       "taxAmount": '. ($order->total - $order->subtotal) .',
-      "shippingAmount":'. ($order->total - $order->subtotal) .'
+      "shippingAmount":'. ($order->total - $order->subtotal) .',
+      "merchantSystemInformation": {
+        "php_version": "' . phpversion() . '",
+        "prestashop_version": "' . $ecommerce_platform_string . '",
+        "plugin_version": "1.5.0",
+        "platform": "PrestaShop"
+      }
     }';
 
 
@@ -356,3 +369,4 @@ class PayFlexService {
   }
 
 }
+
