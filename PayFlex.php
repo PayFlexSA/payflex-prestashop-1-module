@@ -23,10 +23,9 @@
  *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  *  International Registered Trademark & Property of PrestaShop SA
  */
-include_once(_PS_MODULE_DIR_.'PayFlex/PayFlexService.php');
+if(class_exists('PayFlexMain')) return;
 
-error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
-ini_set('display_errors', '1');
+include_once(_PS_MODULE_DIR_.'PayFlex/PayFlexService.php');
 
 if (!defined('_PS_VERSION_')) {
     exit;
