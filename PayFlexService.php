@@ -30,7 +30,6 @@ class PayFlexOrder {
   public $confirm_url = '';
   // required
   public $cancel_url = '';
-  public $status_url = '';
   public $items = [];
 }
 
@@ -230,8 +229,7 @@ class PayFlexService {
     $OrderBodyString .= '],
       "merchant": {
         "redirectConfirmUrl": "'. $order->confirm_url .'&status=confirmed",
-        "redirectCancelUrl": "'. $order->cancel_url .'&status=cancelled",
-        "statusCallbackUrl": "'. $order->status_url .'&status=status"
+        "redirectCancelUrl": "'. $order->cancel_url .'&status=cancelled"
       },
       "merchantReference": "'. $order->order_id .'",
       "token": "'. $order->order_id .'",
